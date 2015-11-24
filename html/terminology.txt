@@ -1,0 +1,156 @@
+Non-ascii representation in html:
+	&#x265B; represents chess queen(black)
+
+===================================================
+
+The <!DOCTYPE> declaration must be the very first thing in your HTML document, before the <html> tag.
+
+The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.
+
+In HTML 4.01, the <!DOCTYPE> declaration refers to a DTD, because HTML 4.01 was based on SGML. The DTD specifies the rules for the markup language, so that the browsers render the content correctly.
+
+HTML5 is not based on SGML, and therefore does not require a reference to a DTD.
+
+Common DOCTYPE Declarations
+---------------------------
+
+HTML 5
+<!DOCTYPE html>
+
+
+HTML 4.01 Strict
+This DTD contains all HTML elements and attributes, but does NOT INCLUDE presentational or deprecated elements (like font). Framesets are not allowed.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+HTML 4.01 Transitional
+This DTD contains all HTML elements and attributes, INCLUDING presentational and deprecated elements (like font). Framesets are not allowed.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+HTML 4.01 Frameset
+This DTD is equal to HTML 4.01 Transitional, but allows the use of frameset content.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+
+XHTML 1.0 Strict
+This DTD contains all HTML elements and attributes, but does NOT INCLUDE presentational or deprecated elements (like font). Framesets are not allowed. The markup must also be written as well-formed XML.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+XHTML 1.0 Transitional
+This DTD contains all HTML elements and attributes, INCLUDING presentational and deprecated elements (like font). Framesets are not allowed. The markup must also be written as well-formed XML.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+XHTML 1.0 Frameset
+This DTD is equal to XHTML 1.0 Transitional, but allows the use of frameset content.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+
+XHTML 1.1
+This DTD is equal to XHTML 1.0 Strict, but allows you to add modules (for example to provide ruby support for East-Asian languages).
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+================================================
+
+Block-level Elements:
+
+	A block-level element always starts on a new line and takes up 
+	the full width available (stretches out to the left and right 
+	as far as it can).
+
+	The <div> element is a block-level element.
+
+	Examples of block-level elements:
+
+	<div>
+	<h1> - <h6>
+	<p>
+	<form>
+
+
+Inline Elements:
+
+	An inline element does not start on a new line and only takes up 
+	as much width as necessary.
+
+	This is an inline <span> element inside a paragraph.
+
+	Examples of inline elements:
+
+	<span>
+	<a>
+	<img>
+
+
+
+CSS groups HTML elements into two categories
+
+1)
+Replaced Element:
+
+	An element whose content is outside the scope of the CSS formatting model, 
+	such as an image, embedded document, or applet. For example, the content 
+	of the HTML IMG element is often replaced by the image that its "src" 
+	attribute designates. Replaced elements often have intrinsic dimensions: 
+	an intrinsic width, an intrinsic height, and an intrinsic ratio. For 
+	example, a bitmap image has an intrinsic width and an intrinsic height 
+	specified in absolute units (from which the intrinsic ratio can obviously 
+	be determined). On the other hand, other documents may not have any 
+	intrinsic dimensions (for example, a blank HTML document).
+
+	User agents may consider a replaced element to not have any intrinsic 
+	dimensions if it is believed that those dimensions could leak sensitive 
+	information to a third party. For example, if an HTML document changed 
+	intrinsic size depending on the user's bank balance, then the UA might 
+	want to act as if that resource had no intrinsic dimensions.
+
+	The content of replaced elements is not considered in the CSS rendering model.
+
+	Some HTML elements do not have content in between opening and closing tags. 
+	For example:
+		<img src="eightball.gif">  or  <input type="reset">
+	The img and input elements do not have separate closing tags and therefore 
+	do not have any content. These elements use attributes to specify external 
+	resources to display. In the example above, the img element specifies an 
+	image to display and the input element specifies a button. You can say that 
+	their contents are replaced by external resources.
+
+2) 
+Non-replaced element:
+	Most HTML elements have an opening tag, a closing tag, and content in between
+	the two tags. 
+	For example:
+		<div>content</div>  or  <p>content</p>
+	The div and p elements are called non-replaced elements because their content
+	is actually displayed. It is not replaced with something else.
+========================================================================================
+
+Q) What's the difference of 'ContentType' and 'MimeType'?
+
+A) html attribute 'type' defines the 'content-type' in http-response header.
+
+   The official docs was able to solve the issue in a pratical manner:
+
+   content_type is an alias for mimetype. Historically, this parameter was 
+   only called mimetype, but since this is actually the value included in 
+   the HTTP Content-Type header, it can also include the character set 
+   encoding, which makes it more than just a MIME type specification. 
+   If mimetype is specified (not None), that value is used. Otherwise, 
+   content_type is used. If neither is given, the DEFAULT_CONTENT_TYPE setting is used.
+
+========================================================================================
+
+
+Q) What is 'rel' attribute in html?
+A) html attribute 'rel' specifies the relationship between the current document 
+    and the linked document.
+   Browsers do not use this attribute in any way. However, search engines can use 
+   this attribute to get more information about a link.
+
+
+
+==========================================================================================
+
+

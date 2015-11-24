@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Sample site</title>
+		<style type="text/css">
+			body{
+				margin: 20px;
+				background: #ececec;
+				color:#474747;
+				font-family: helvetica;
+			}
+
+			div{
+				background: #ccc;
+				border: 1px solid #000;
+				display:inline-block;
+				padding: 20px;
+			}
+
+			div img{
+				margin: auto;
+				border: 1px solid #474747;
+
+			}
+
+			div p{
+				font-size: 13px;
+				text-align: center;
+				margin: 10px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Sample Site</h1>
+		<div>
+			<img src="preview.jpg">
+		</div>
+		<script type="text/javascript">
+			var p = document.createElement("p");
+			p.appendChild(document.createTextNode("What to look for in a web host"));
+			document.getElementsByTagName('div')[0].appendChild(p);
+		</script>
+	</body>
+</html>

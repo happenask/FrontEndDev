@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+    	<title>Table data</title>
+    </head>
+    <body>
+        <table width="400px" border="1" cellpadding="10" cellspacing="10">
+            <tr><!-- height is set to all columns in a row-->
+                <th height="50px">Name</th>
+                <th>Age</th>
+                <th>Place</th>
+                <th>Gender</th>
+            </tr>
+            <tr> <!-- By default align is center(other than left/right) and valign is middle(other than top/bottom)-->
+                <td align="right" height="30px">Sham</td>
+                <td align="right">35</td>
+                <td align="right">INDIA</td>
+                <td align="right">Male</td>
+            </tr>
+            <tr> <!-- width gets overridden here for first column of all rows-->
+                <td width="70px" align="right" height="30px">Adeeba</td>
+                <td align="right">6</td>
+                <td align="right">INDIA</td>
+                <td align="right">Female</td>
+            </tr>
+            <tr> <!-- colspan merges columns in a row, remove next column in same row-->
+                <td align="right" height="30px">Tanveer</td>
+                <td align="right">31</td>
+                <td colspan="2" align="right">Colspan</td>
+                <!--td align="right">Female</td-->
+            </tr>
+            <tr> <!-- rowspan merges rows in a column, so corresponding column has to be removed in next row-->
+                <td align="right" height="30px">Tanveer</td>
+                <td align="right">31</td>
+                <td align="right">INDIA</td>
+                <td rowspan="2" align="right">Rowspan</td>
+            </tr>
+            <tr> 
+                <td align="right" height="30px">Mujahed</td>
+                <td align="right">26</td>
+                <td align="right">INDIA</td>
+                <!--td align="right">Male</td-->
+            </tr>
+        </table>
+    </body>
+</html>

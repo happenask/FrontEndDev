@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form using css</title>
+		<style type="text/css">
+			
+			form{
+				width:400px;
+				height: 800px;
+				background: #7CB9E8; /* url(someimg)*/
+				padding-left: 15px;
+				padding-top: 10px;
+				color: white;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			
+			.name, .email, .phone, .address, .postcode, .country, .cardtype, .cardnumber, .securitycode, .cardname{
+				border: 1px solid white;
+				color: black;
+				font-weight: normal;
+				padding: 10px 2px 5px 5px;
+				background: #B284BE;
+				width:90%;
+			}
+
+			label{
+				display:inline-block;
+				width:30%;
+			}
+			.cardtype label{
+				display:block;
+				height: 30%
+			}
+			
+			input, div, form{
+				border-radius: 5px;
+			}
+			
+			input, textarea{
+				width:60%;
+			}
+			table, tr, td{
+				width: 100%;
+				height:60%;
+				border: 1px solid red;
+			}
+			.submitcontainer{
+				width: 30%;
+				margin: auto;
+			}
+			
+			.submitcontainer input{
+				border-radius: 30px;
+			}
+
+			.name, .email, .phone, .postcode, .country, .cardnumber, .securitycode, .cardname{
+				height:5%;
+			}
+			.address{
+				height:10%;	
+			}
+			.cardtype{
+				height: 8%;
+			}
+
+			.name, .address, .cardtype{
+				margin-top:5px;	
+			}
+			.email, .phone, .postcode, .country, .cardnumber, .securitycode, .cardname{
+				margin-top: 2px;
+			}
+
+			
+			
+
+		</style>
+	</head>
+	<body>
+		<form action="someaction.php" method="get" enctype="multipart/form-data">
+			Step1: Your details<br>
+			<div class="name">
+				<label>Name:</label><input type="text">
+			</div>
+			<div class="email">
+				<label>Email:</label><input type="email">
+			</div>
+			<div class="phone">
+				<label>Phone:</label><input type="tel">
+			</div><br>
+			Step2: Delivery address
+			<div class="address">
+				<label>Address:</label><textarea></textarea>
+			</div>
+			<div class="postcode">
+				<label>Post code:</label><input type="text">
+			</div>
+			<div class="country">
+				<label>Country:</label><input type="text">
+			</div><br>
+			Step3: Card details
+			<div class="cardtype">
+				<label>Cardtype:</label>
+				<table>
+					<tr>
+						<td>
+							<input type="radio" name="cardtype" value="visa">			
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/175px-Visa.svg.png"> VISA
+						</td>
+						<td>
+							<input type="radio" name="cardtype" value="amex">
+							<img src="http://www.hoax-slayer.com/images/american-express-security-update-scam-2.jpg"> AMEX		
+						</td>
+						<td>
+							<input type="radio" name="cardtype" value="mastercard">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2000px-MasterCard_Logo.svg.png"> Master card
+						</td>
+					</tr>
+				</table>	
+			</div>
+			<div class="cardnumber">
+			</div>
+			<div class="securitycode">
+			</div>
+			<div class="cardname">
+			</div>
+			<div class="submitcontainer">
+				<input type="Submit" align="middle" value="BUY IT!">
+			</div>
+		</form>
+	</body>
+</html>
