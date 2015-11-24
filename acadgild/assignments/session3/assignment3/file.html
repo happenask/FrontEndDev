@@ -1,106 +1,47 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Form using css</title>
-		<style type="text/css">
-			
-			form{
-				width:400px;
-				height: 800px;
-				background: #7CB9E8; /* url(someimg)*/
-				padding-left: 15px;
-				padding-top: 10px;
-				color: white;
-				font-size: 12px;
-				font-weight: bold;
-			}
-			
-			.name, .email, .phone, .address, .postcode, .country, .cardtype, .cardnumber, .securitycode, .cardname{
-				border: 1px solid white;
-				color: black;
-				font-weight: normal;
-				padding: 10px 2px 5px 5px;
-				background: #B284BE;
-				width:90%;
-			}
-
-			label{
-				display:inline-block;
-				width:30%;
-			}
-			.cardtype label{
-				display:block;
-				height: 30%
-			}
-			
-			input, div, form{
-				border-radius: 5px;
-			}
-			
-			input, textarea{
-				width:60%;
-			}
-			table, tr, td{
-				max-width: 100%;
-				max-height:60%;
-				border: 1px solid red;
-			}
-			.submitcontainer{
-				width: 30%;
-				margin: auto;
-			}
-			
-			.submitcontainer input{
-				border-radius: 30px;
-			}
-
-			.name, .email, .phone, .postcode, .country, .cardnumber, .securitycode, .cardname{
-				height:5%;
-			}
-			.address{
-				height:10%;	
-			}
-			.cardtype{
-				height: 8%;
-			}
-
-			.name, .address, .cardtype{
-				margin-top:5px;	
-			}
-			.email, .phone, .postcode, .country, .cardnumber, .securitycode, .cardname{
-				margin-top: 2px;
-			}
-
-			
-			
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">	
 	</head>
 	<body>
-		<form action="someaction.php" method="get" enctype="multipart/form-data">
+		<form class ="shoppingform" action="someaction.php" method="get" enctype="multipart/form-data">
 			Step1: Your details<br>
-			<div class="name">
-				<label>Name:</label><input type="text">
+			<div class="customername">
+				<div class="center">
+					<label class="formlabel">Name:</label><input type="text">
+				</div>
 			</div>
-			<div class="email">
-				<label>Email:</label><input type="email">
+			<div class="customeremail">
+				<div class="center">
+					<label class="formlabel">Email:</label><input type="email">
+				</div>
 			</div>
-			<div class="phone">
-				<label>Phone:</label><input type="tel">
+			<div class="customerphone">
+				<div class="center">
+					<label class="formlabel">Phone:</label><input type="tel">
+				</div>
 			</div><br>
 			Step2: Delivery address
-			<div class="address">
-				<label>Address:</label><textarea></textarea>
+			<div class="customeraddress">
+				<div class="center">
+					<label class="formlabel">Address:</label><textarea></textarea>
+				</div>
 			</div>
-			<div class="postcode">
-				<label>Post code:</label><input type="text">
+			<div class="customerpostcode">
+				<div class="center">
+					<label class="formlabel">Post code:</label><input type="text">
+				</div>
 			</div>
-			<div class="country">
-				<label>Country:</label><input type="text">
+			<div class="customercountry">
+				<div class="center">
+					<label class="formlabel">Country:</label><input type="text">
+				</div>
 			</div><br>
 			Step3: Card details
-			<div class="cardtype">
-				<label>Cardtype:</label>
+			<div class="customercardtype">
+				<label class="formlabel">Cardtype:</label>
 				<table>
 					<tr>
 						<td>
@@ -118,14 +59,20 @@
 					</tr>
 				</table>	
 			</div>
-			<div class="cardnumber">
+			<div class="customercardnumber">
+				<div class="center">
+				</div>
 			</div>
-			<div class="securitycode">
+			<div class="customersecuritycode">
+				<div class="center">
+				</div>
 			</div>
-			<div class="cardname">
+			<div class="customercardname">
+				<div class="center">
+				</div>
 			</div>
 			<div class="submitcontainer">
-				<input type="Submit" align="middle" value="BUY IT!">
+					<input type="Submit" align="middle" value="BUY IT!">
 			</div>
 		</form>
 	</body>

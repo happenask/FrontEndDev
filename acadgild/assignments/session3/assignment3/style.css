@@ -1,0 +1,114 @@
+.shoppingform{
+				width:400px;
+				height: 800px;
+				background: #7CB9E8; /* url(some img)*/
+				padding-left: 15px;
+				padding-top: 10px;
+				color: white;
+				font-size: 12px;
+				font-weight: bold;
+				border-radius: 5px;
+			}
+			
+.customername, .customeremail, .customerphone, .customeraddress, .customerpostcode, 
+.customercountry, .customercardtype, .customercardnumber, .customersecuritycode, .customercardname{
+				border: 1px solid white;
+				color: black;
+				font-weight: normal;
+				padding: 10px 2px 5px 5px;
+				background: #B284BE;
+				width:90%;
+				border-radius: 5px;
+				position: relative;
+			}
+	.submitcontainer{
+				padding: 10px 2px 5px 5px;
+				width: 90%;
+				position: relative;
+				height: 5%;		
+			}
+			
+	
+
+.customername, .customeremail, .customerphone, .customerpostcode, .customercountry, 
+.customercardnumber, .customersecuritycode, .customercardname{
+				height:5%;
+			}
+
+.customeraddress{
+				height:10%;	
+			}
+.customercardtype{
+				height: 8%;
+			}
+
+.customername, .customeraddress, .customercardtype{
+				margin-top:5px;	
+			}
+
+.customeremail, .customerphone, .customerpostcode, .customercountry, .customercardnumber, 
+.customersecuritycode, .customercardname{
+				margin-top: 2px;
+			}
+
+.formlabel{
+		display:inline-block;
+		width:30%;
+		}
+
+.customercardtype .formlabel{
+				display:block;
+				height: 20%
+			}
+			
+.shoppingform   div > input{
+				border-radius: 5px;
+				width: 60%;
+			}
+			
+.shoppingform   div > textarea{
+				border-radius: 5px;
+				width:60%;
+		}
+.shoppingform .submitcontainer input{
+				border-radius: 60px;
+				display: inline-block;
+    			width: 30%;			
+				position:absolute;
+    			top: 50%;
+    			left: 50%;
+    			transform: translateY(-50%); /* works without position property*/
+    			transform: translateX(-50%);
+    		}
+
+.center{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%); /* works without position property*/
+    width: 100%;
+}
+			table, tr{
+				width: 100%;
+				max-height:60%;
+				border: 1px solid red;
+			}
+			td{
+				width: 33%;
+			}
+			
+
+			
+			
+
+			
+			
+
+			
+			img{
+				width: 10%;
+				height: 10%;
+			}
+			table input{
+				width: 10%;
+
+			}
