@@ -1,0 +1,134 @@
+/* @import rules must precede all others */
+@import "heading.css";
+@import "paragraph.css";
+
+
+/*
+	FONT VS. TYPEFACE
+
+	Back in the good old days of analog printing, every page was 
+	laboriously set out in frames with metal letters. That was 
+	rolled in ink, and then it was pressed down onto a clean 
+	piece of paper. That was a page layout. Printers needed 
+	thousands of physical metal blocks, each with the character 
+	it was meant to represent set out in relief (the type face). 
+	If you wanted to print Garamond, for example, you needed 
+	different blocks for every different size (10 point, 12 
+	point, 14 point, and so on) and weight (bold, light, medium).
+
+	This is where we get the terms typeface and font. In the 
+	example above, Garamond would be the typeface: It described 
+	all of the thousands of metal blocks a printer might have 
+	on hand and which had been designed with the same basic 
+	design principles. But a font was something else entirely. 
+	A font described a subset of blocks in that very typeface—
+	but each font embodied a particular size and weight. For 
+	example, bolded Garamond in 12 point was considered a 
+	different font than normal Garamond in 8 point, and 
+	italicized Times New Roman at 24 point would be considered 
+	a different font than italicized Times New Roman at 28 point.
+*/
+
+/*
+	CSS has several properties for styling text.
+
+	There is a convenient shorthand property, font, which you can use to specify several aspects at once—for example:
+		. Bold, italic, and small-caps (small capitals)
+		. The size
+		. The line height
+		. The font typeface
+
+	p {font: italic 75%/125% "Comic Sans MS", cursive;}
+
+	This rule sets various font properties, making all paragraphs italic.
+	The font size is set to three-quarters of the size in each paragraph's
+		 parent element, and the line height is set to 125% (a little 
+		 more spaced than normal).
+	The font typeface is set to Comic Sans MS, but if this typeface is 
+		not available then the browser will use its default cursive 
+		(hand-written) typeface.
+	The rule has the side-effect of turning off of bold and small-caps 
+		(setting them to normal)
+*/
+
+
+
+/* 	
+	To specify a typeface on its own, use the font-family property. 
+*/
+* { font-family: "Arial Black", Gadget, sans-serif;}
+
+div * { font-family: "Comic Sans MS", cursive, sans-serif; }
+
+.siteLink{
+	font-family: Georgia, serif;
+}
+
+#tonyquote{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: black;
+}
+
+/*
+	Combined selector
+*/
+p.sitelink {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: black;
+}
+
+span#tonyname {
+  font-family: "Times New Roman", Times, serif;
+  color: blue;
+}
+
+/*
+	Slectors based on relationship
+*/
+#tutorials ol li {
+  color: purple;
+}
+ 
+#tutorials ul li {
+  color: green;
+}
+
+h3 + p{
+	font-style: italic;
+}
+
+h3 + p > a{
+	color: red;
+}
+
+/*
+	background is a shortcut for
+
+	1 - background-color
+	2 - background-image
+	3 - background-position
+	4 - background-repeat
+	5 - background-attachment
+	6 - background-clip
+	7 - background-origin
+	8 - background-size 
+*/
+
+/*
+	Attribute selectors
+*/
+p[class]{
+	background: gray;
+}
+
+p[id]{
+	background: yellow;
+}
+
+/*
+	Attribute selector:
+	[attr~=value]
+			Represents an element with an attribute name of attr whose value is a whitespace-separated 
+			list of words, one of which is exactly "value".
+*/
+*[alt~="nintendo"] {background: orange;}
