@@ -53,6 +53,10 @@
 		width:30%;
 		}
 
+.shoppingform  > .customeraddress   textarea{
+	vertical-align: middle;
+}
+
 .customercardtype .formlabel{
 				display:block;
 				height: 20%
@@ -63,7 +67,7 @@
 				width: 60%;
 			}
 			
-.shoppingform   div > textarea{
+.shoppingform   .customeraddress  textarea{
 				border-radius: 5px;
 				width:60%;
 		}
