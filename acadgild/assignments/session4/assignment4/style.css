@@ -1,0 +1,39 @@
+body {
+  text-align: center
+}
+div.box{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px
+	margin: auto;
+	
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+}
+
+div.div1{
+	background: -moz-linear-gradient(left, red, green);
+  	background: -webkit-linear-gradient(left, red, green);
+  	background: -ms-linear-gradient(left, red, green);
+  	background: -o-linear-gradient(left, red, green);
+  	background: linear-gradient(left, red, green);
+}
+
+div.div2{
+	background: -moz-radial-gradient(top, circle, red, yellow, green);
+  	background: -webkit-radial-gradient(top, circle, red, yellow, green);
+  	background: -ms-radial-gradient(top, circle, red, yellow, green);
+  	background: -o-radial-gradient(top, circle, red, yellow, green);
+  	background: radial-gradient(top, circle, red, yellow, green);
+}
+
+div.div3{
+	background: -moz-radial-gradient(top, ellipse, red, yellow, green);
+  	background: -webkit-radial-gradient(top, ellipse, red, yellow, green);
+  	background: -ms-radial-gradient(top, ellipse, red, yellow, green);
+  	background: -o-radial-gradient(top, ellipse, red, yellow, green);
+  	background: radial-gradient(top, ellipse, red, yellow, green);
+}
