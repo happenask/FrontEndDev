@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-<head>
-	<meta charset="utf-8">
-	<style type="text/css">
-		.container{
-		    background-color: red;
-		    width: 300px;
-		    padding: 3px;
-		}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			window.onload = myfunc;
 
-		.Orange{
-		    background-color: orange;
-		    /*border: 1px dashed black;*/
-		    color: white;
-		    display: block;
-		    width:100px;
-		    float: right;
-		}
+			function myfunc(){
+				var x = "";
+   				
 
-		.green{
-		    background-color: green;
-		    color: white;
-		    display: block;
-		    width:300px;
-		    
-		}
-		.blue{
-		    background-color: blue;
-		    color: white;
-		    display: block;
-		    width:300px;
-		}
-	</style>
-</head>
-<body>
-	<div class = "container">
-	    <a class ="Orange">Orange</a>
-	    <a class ="green">Green</a>
-	    <a class ="blue">Blue</a>
-	</div>
-</body>
+   				window['Object']['getOwnPropertyNames'] (window['Array']['prototype'])['forEach'](function(val){
+   																	x += val+": "+window['Array']['prototype'][val]+ "<br />";
+   																									});
+   				document.write(x);
+   				x = "**********************\n";
+   				window['Object']['getOwnPropertyNames'] (window['Array'])['forEach'](function(val){
+   																	x +=  val+": "+window['Array'][val]+ "<br />";
+   																									});	
+   				document.write(x);
+   			}
+		</script>
+	</head>
+	<body>
+		
+		
+	</body>
+</html>
