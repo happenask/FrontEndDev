@@ -6,18 +6,14 @@
 			window.onload = myfunc;
 
 			function myfunc(){
-				var x = "";
-   				
-
+				
    				window['Object']['getOwnPropertyNames'] (window['Array']['prototype'])['forEach'](function(val){
-   																	x += val+": "+window['Array']['prototype'][val]+ "<br />";
+   															window['document']['write'](val+": "+window['Array']['prototype'][val]+ "<br />");
    																									});
-   				document.write(x);
-   				x = "**********************\n";
    				window['Object']['getOwnPropertyNames'] (window['Array'])['forEach'](function(val){
-   																	x +=  val+": "+window['Array'][val]+ "<br />";
+   				                                            window['document']['write'](val+": "+window['Array'][val]+ "<br />");
    																									});	
-   				document.write(x);
+   				
    			}
 		</script>
 	</head>
