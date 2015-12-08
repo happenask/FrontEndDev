@@ -25,8 +25,11 @@
 				Canine.prototype.constructor = Canine;
 				Wolf.prototype = Object.create(Canine.prototype);
 				Wolf.prototype.constructor = Wolf;
-				// So Canin.prototype and Wolf.prototype objects do not have copies of name and toString.
-				// Bergi, Is this your intention to not use new keyword?
+				//Bergi,
+				// So, Canin.prototype and Wolf.prototype objects do not have copies of name and toString.
+				// Is this your intention to not use new keyword? BTW, I wrote this code, without 
+				// seeing your referred link.
+				
 				var arcticWolf = new Wolf();
 		
 				
