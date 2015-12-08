@@ -3,18 +3,33 @@
 	<head>
 		<meta charset="UTF-8">
 		<script>
-			window.onload = myfunc;
+				function Animal(){
+				  this.name = "Animal";
+							 
+				  // toString is a function in the main Object that every
+				  // object inherits from
+				  this.toString = function() {
+					return "My name is : " + this.name;
+				  };
+				}
 
-			function myfunc(){
+				function Canine(){
+				  this.name = "Canine";
+				}
+							 
+				function Wolf(){
+				  this.name = "Wolf";
+				}
+
+				Canine.prototype = Object.create(Animal.prototype);
+				Canine.prototype.constructor = Canine;
+				Wolf.prototype = Object.create(Canine.prototype);
+				Wolf.prototype.constructor = Wolf;
+				//So Canin.prototype and Wolf.prototype objects do not have copies of name and toString.
+
+				var arcticWolf = new Wolf();
+		
 				
-   				window['Object']['getOwnPropertyNames'] (window['Array']['prototype'])['forEach'](function(val){
-   															window['document']['write'](val+": "+window['Array']['prototype'][val]+ "<br />");
-   																									});
-   				window['Object']['getOwnPropertyNames'] (window['Array'])['forEach'](function(val){
-   				                                            window['document']['write'](val+": "+window['Array'][val]+ "<br />");
-   																									});	
-   				
-   			}
 		</script>
 	</head>
 	<body>
