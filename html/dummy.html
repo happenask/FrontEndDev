@@ -5,13 +5,12 @@
 		<script>
 				function Animal(){
 				  this.name = "Animal";
-							 
-				  // toString is a function in the main Object that every
-				  // object inherits from
-				  this.toString = function() {
-					return "My name is : " + this.name;
-				  };
 				}
+				// toString is a function in the main Object that every
+				// object inherits from
+				Animal.prototype.toString = function() {
+					return "My name is : " + this.name;
+				};
 
 				function Canine(){
 				  this.name = "Canine";
