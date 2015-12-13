@@ -2,40 +2,26 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<script>
-				function Animal(){
-				  this.name = "Animal";
-				}
-				// toString is a function in the main Object that every
-				// object inherits from
-				Animal.prototype.toString = function() {
-					return "My name is : " + this.name;
-				};
-
-				function Canine(){
-				  this.name = "Canine";
-				}
-							 
-				function Wolf(){
-				  this.name = "Wolf";
-				}
-
-				Canine.prototype = Object.create(Animal.prototype);
-				Canine.prototype.constructor = Canine;
-				Wolf.prototype = Object.create(Canine.prototype);
-				Wolf.prototype.constructor = Wolf;
-				//Bergi,
-				// So, Canin.prototype and Wolf.prototype objects do not have copies of name and toString.
-				// Is this your intention to not use new keyword? BTW, I wrote this code, without 
-				// seeing your referred link.
-				
-				var arcticWolf = new Wolf();
 		
-				
-		</script>
 	</head>
 	<body>
 		
+		<form action="#" id="sampForm" method="POST">
+			<input id='charInput' type='text'>
+			<p id="KeyData">Key press data here</p>
+		</form><br>
+		
+		<script>
+			document.getElementById('charInput').onkeypress = f;
+
+			/* 
+			   An object which implements the Event interface is generally passed     as the first parameter to an event handler.
+			*/
+			function f(){ /* I am not using this event */
+				document.getElementById('KeyData').innerHTML = 	document.getElementById('charInput').value  + 'is pressed';
+				return true;
+			}
+		</script>
 		
 	</body>
 </html>
