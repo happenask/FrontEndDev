@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Expression checker</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function checkBrackets(str, i = 0, balance = 0){
+				if(i == str.length){
+					return (balance == 0)?"correct":"incorrect";
+				}
+				else if(str.charAt(i) == '('){
+					return checkBrackets(str, ++i, ++balance);
+				}else if(str.charAt(i) == ')'){
+					return checkBrackets(str, ++i, --balance);
+				}else{
+					return checkBrackets(str, ++i, balance);
+				}
+			}			
+			console.log(checkBrackets('( ( a + b ) / 5 abd )'));
+			console.log(checkBrackets(') ( a + b ) )'));
+			console.log(checkBrackets('( b * ( c + d *2 / ( 2 + ( 12 abc / ( a + 3 ) ) ) )'));
+		</script>
+	</body>
+</html>

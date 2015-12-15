@@ -8,7 +8,7 @@
 		<script type="text/javascript">
 			function findMaxSequence(array, start = -1, end = -1, i = 0, results=[]){
     		    if((array.length == 1) || (array.length == 0)){
-			            return array;  
+			            return "[ " + array + " ]";  
 			    }
 			    else if(i >= array.length-1){
 			           if(start != -1){
@@ -20,7 +20,7 @@
 			                    return a.length < b.length;
 			                }
 			             );
-			             return (results[0].length > results[1].length) ? results[0].length : "no";
+			             return "[ " + results[0].toString() + " ]";
 			           }else{
 			             return "no";
 			           } 
@@ -28,17 +28,26 @@
 			           if (start == -1){
 			           		start = i;  
 			           }
-			           end = i+1;
-			           return findMaxSequence(array, start, end, ++i); 
-			    }else if(array[i] > array[i+1]){
+			           return findMaxSequence(array, start, i+1, ++i, results); 
+			    }else if(array[i] >= array[i+1]){
 			          if(start != end){
 			            results.push(array.slice(start, end+1))
 			          }
-			          return findMaxSequence(array, -1, -1, ++i); 
+			          return findMaxSequence(array, -1, -1, ++i, results); 
 			    }
 			    
 			}
-			console.log(findMaxSequence([1, 2, 3]));
+			console.log(findMaxSequence([3,2,3,4,2,2,4]));
+			console.log('**********************************')
+			console.log(findMaxSequence([3, 5, 4, 6, 1, 2, 3, 6, 10, 32]));
+			console.log('**********************************')
+			console.log(findMaxSequence([3,2,1]));
+			console.log('**********************************')
+			console.log(findMaxSequence([1]));
+			console.log('**********************************')
+			console.log(findMaxSequence([2, 2, 2, 2]));
+			console.log('**********************************')
+			console.log(findMaxSequence([1, 2, 2, 3, 3, 4]));
 		</script>
 	</body>
 </html>
