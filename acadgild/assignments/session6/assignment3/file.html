@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Max sequence</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function findMaxSequence(array, start = -1, end = -1, i = 0, results=[]){
+    		    if((array.length == 1) || (array.length == 0)){
+			            return array;  
+			    }
+			    else if(i >= array.length-1){
+			           if(start != -1){
+			                results.push(array.slice(start, end+1));
+			           }
+			           if(results.length > 0){
+			             results.sort(
+			                function(a, b){
+			                    return a.length < b.length;
+			                }
+			             );
+			             return (results[0].length > results[1].length) ? results[0].length : "no";
+			           }else{
+			             return "no";
+			           } 
+			    }else if(array[i] < array[i+1]){
+			           if (start == -1){
+			           		start = i;  
+			           }
+			           end = i+1;
+			           return findMaxSequence(array, start, end, ++i); 
+			    }else if(array[i] > array[i+1]){
+			          if(start != end){
+			            results.push(array.slice(start, end+1))
+			          }
+			          return findMaxSequence(array, -1, -1, ++i); 
+			    }
+			    
+			}
+			console.log(findMaxSequence([1, 2, 3]));
+		</script>
+	</body>
+</html>
+

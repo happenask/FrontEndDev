@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fizz Buzz</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			body{
+				background-color: black;
+				border-left: 2px solid 	#006A4E;
+				border-bottom: 2px solid #006A4E;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var i = 1;
+			while(i <= 100){
+				if((i % 3 == 0) && (i % 5 == 0)){
+					document.body.innerHTML += i + " FizzBuzz" + "<br>";
+				}else if(i % 3 == 0){
+					document.body.innerHTML += i + " Fizz" + "<br>";
+				}else if(i % 5 == 0){
+					document.body.innerHTML += i + " Buzz" + "<br>";
+				}else{
+					document.body.innerHTML += i  + "<br>";
+				}
+				i++;
+			}
+		</script>
+	</body>
+</html>
