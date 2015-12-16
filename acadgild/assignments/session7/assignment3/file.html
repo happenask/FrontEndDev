@@ -7,22 +7,21 @@
 			window.onload = function(){
 				document.formex.numberinput.onchange = checkIfNumber;
 		        function checkIfNumber(){
-		    	     if (isNaN(document.formex.numberinput.value)){
+		    	     if (isNaN(parseInt(document.formex.numberinput.value, 10)){
 		             	document.formex.numberinput.innerHTML = document.formex.numberinput.value;
 		                document.formex.numberinput.readOnly = true;
-		                setTimeout(function(elm){            
+		                setTimeout(function(){            
 			               document.formex.numberinput.readOnly = false;
-			            }, 4000, this);
+			            }, 4000);
 		              }
 		         }
 			}
 		</script>
 		<style type="text/css">
-			<style>
-		        input:read-only {
+				input[readonly] {
 		           background-color: red;
 		        }
-		    </style>
+		</style>
 	</head>
 	<body>
 		<form name="formex">
