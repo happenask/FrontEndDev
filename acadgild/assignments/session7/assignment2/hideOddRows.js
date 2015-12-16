@@ -1,10 +1,8 @@
 /* hideOddRows.js */
-document.querySelector('[name=HideRows]').onclick = hideRows;
+document.getElementbyId('HideRows').onclick = hideRows;
 
 function hideRows(){
 	var elements = document.getElementsByClassName('hide');
-	Array.prototype.forEach.call(elements, function(element){
-	    element.style.display = "none";
-	});
+	document.getElementsbyTagName('table').item(0).className = "odd-rows-hidden";
 	return true;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text field</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			window.onload = function(){
+				document.formex.numberinput.onchange = checkIfNumber;
+		        function checkIfNumber(){
+		    	     if (parseInt(document.formex.numberinput.value) == NaN){
+		             	document.formex.numberinput.innerHTML = document.formex.numberinput.value;
+		                document.formex.numberinput.readOnly = "true";
+		                setTimeout(function(){            
+			               document.formex.numberinput.readOnly = "false";
+			            }, 4000);
+		              }
+		         }
+			}
+		</script>
+		<style type="text/css">
+			<style>
+		        input:-moz-read-only { /* For Firefox */
+		           background-color: red;
+		        }
+		    
+		        input:read-only {
+		           background-color: red;
+		        }
+		    </style>
+	</head>
+	<body>
+		<form name="formex">
+			<input type="text" name="numberinput">
+		</form>
+	</body>
+</html>

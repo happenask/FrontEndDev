@@ -3,6 +3,11 @@
 	<head>
 		<title>Hide odd rows</title>
 		<meta charset="UTF-8">
+		<style type="text/css">
+			table.odd-rows-hidden tr:nth-child(odd) {
+			    display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div style="background-color:#8F9779;width:200px;height:30px;">
@@ -25,7 +30,7 @@
 				<td width="40" height="20">row 5</td>
 			</tr>
 		</table><br>
-		<button type="button" name="HideRows">Hide Odd Rows</button>
+		<button type="button" id="HideRows">Hide Odd Rows</button>
 		<script type="text/javascript" src="hideOddRows.js"></script>
 	</body>
 </html>
