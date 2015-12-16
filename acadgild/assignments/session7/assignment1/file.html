@@ -15,19 +15,20 @@
 		</style>
 	</head>
 	<body>
+		<button type="button" name="LikeUnlike">Like</button>
 		<script type="text/javascript">
-			document.body.lastElementChild.onclick = changeColor;
+			document.querySelector('[name=LikeUnlike]').onclick = changeColor;
 			function changeColor(){
-				if(document.body.lastElementChild.innerHTML == "Like"){
-					document.body.lastElementChild.style.backgroundColor = "#FF9966";
-					document.body.lastElementChild.innerHTML = "Unlike";	
+				if(document.querySelector('[name=LikeUnlike]').innerHTML == "Like"){
+					document.querySelector('[name=LikeUnlike]').style.backgroundColor = "#FF9966";
+					document.querySelector('[name=LikeUnlike]').innerHTML = "Unlike";	
 				}else{
-					document.body.lastElementChild.style.backgroundColor="#00FFFF";
-					document.body.lastElementChild.innerHTML = "Like";	
+					document.querySelector('[name=LikeUnlike]').style.backgroundColor="#00FFFF";
+					document.querySelector('[name=LikeUnlike]').innerHTML = "Like";
 				}
 			}
 		</script>
-		<button type="button" name="LikeUnlike">Like</button>
+		
 
 	</body>
 </html>
