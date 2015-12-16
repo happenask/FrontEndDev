@@ -10,16 +10,16 @@
 		    	     if (isNaN(document.formex.numberinput.value)){
 		             	document.formex.numberinput.innerHTML = document.formex.numberinput.value;
 		                document.formex.numberinput.readOnly = true;
-		                setTimeout(function(){            
+		                setTimeout(function(elm){            
 			               document.formex.numberinput.readOnly = false;
-			            }, 4000);
+			            }, 4000, this);
 		              }
 		         }
 			}
 		</script>
 		<style type="text/css">
 			<style>
-		        input[read-only] {
+		        input:read-only {
 		           background-color: red;
 		        }
 		    </style>
