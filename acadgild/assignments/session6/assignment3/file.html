@@ -7,8 +7,8 @@
 	<body>
 		<script type="text/javascript">
 			function findMaxSequence(array, start = -1, end = -1, i = 0, results=[]){
-    		    if((array.length == 1) || (array.length == 0)){
-			            return "[ " + array + " ]";  
+    		    if(array.length <= 1){
+			            return array	;  
 			    }
 			    else if(i >= array.length-1){
 			           if(start != -1){
@@ -20,7 +20,7 @@
 			                    return a.length < b.length;
 			                }
 			             );
-			             return "[ " + results[0].toString() + " ]";
+			             return results[0];
 			           }else{
 			             return "no";
 			           } 
@@ -38,15 +38,14 @@
 			    
 			}
 			console.log(findMaxSequence([3,2,3,4,2,2,4]));
-			console.log('**********************************')
 			console.log(findMaxSequence([3, 5, 4, 6, 1, 2, 3, 6, 10, 32]));
-			console.log('**********************************')
+			
 			console.log(findMaxSequence([3,2,1]));
-			console.log('**********************************')
+			
 			console.log(findMaxSequence([1]));
-			console.log('**********************************')
+			
 			console.log(findMaxSequence([2, 2, 2, 2]));
-			console.log('**********************************')
+			
 			console.log(findMaxSequence([1, 2, 2, 3, 3, 4]));
 		</script>
 	</body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Button events</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			button{
+				background-color: #00FFFF;
+				border: 2px solid orange;
+				border-radius: 10px;
+				width: 60px;
+				height: 30px;
+				color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" name="LikeUnlike">Like</button>
+		<script type="text/javascript">
+			document.body.lastElementChild.onclick = changeColor;
+			function changeColor(){
+				if(document.body.lastElementChild.innerHTML == "Like"){
+					document.body.lastElementChild.style.backgroundColor = "#FF9966";
+					document.body.lastElementChild.innerHTML = "Unlike";	
+				}else{
+					document.body.lastElementChild.style.backgroundColor="#00FFFF";
+					document.body.lastElementChild.innerHTML = "Like";	
+				}
+			}
+		</script>
+		
+
+	</body>
+</html>
