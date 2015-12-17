@@ -6,12 +6,12 @@
 		<script type="text/javascript">
 			
 			window.onload = function(){
-				var input = document.formex.numberinput;
-				input.onchange = function(){
-		    	    if (isNumber(input.value)){ return ; }
+				var numberInput = document.formex.numberinput;
+				numberInput.onchange = function(){
+		    	    if (isNumber(numberInput.value)){ return ; }
 
-		            input.innerHTML = input.value;
-		            disableFor(input, 10000);
+		            numberInput.innerHTML = numberInput.value;
+		            disableFor(numberInput, 10000);
 		        }
 			}
 
