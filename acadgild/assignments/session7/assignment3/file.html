@@ -4,17 +4,24 @@
 		<title>Text field</title>
 		<meta charset="UTF-8">
 		<script type="text/javascript">
+			
 			window.onload = function(){
-				document.formex.numberinput.onchange = checkIfNumber;
-		        function checkIfNumber(){
-		    	     if (isNaN(parseInt(document.formex.numberinput.value, 10)){
-		             	document.formex.numberinput.innerHTML = document.formex.numberinput.value;
-		                document.formex.numberinput.readOnly = true;
-		                setTimeout(function(){            
-			               document.formex.numberinput.readOnly = false;
-			            }, 4000);
-		              }
-		         }
+				var input = document.formex.numberinput;
+				input.onchange = function(){
+		    	    if (isNumber(input.value)){ return ; }
+
+		            input.innerHTML = input.value;
+		            disableFor(input, 10000);
+		        }
+			}
+
+			function isNumber(value) {
+			    return !(isNaN(parseInt(value, 10)));
+			}
+
+			function disableFor(input, time){
+				input.readOnly = true;
+				setTimeout(function(){ input.readOnly = false;}, time);
 			}
 		</script>
 		<style type="text/css">
