@@ -5,38 +5,6 @@
 		
 	</head>
 	<body>
-		
-		<!--form name="formex">
-			<input type="text" name="mousex">Mouse X Position<br>
-			<input type="text" name="mousey">Mouse Y Position<br>
-		</form-->
-
-		
-		<script>
-			var mie = (navigator.appName == "Microsoft Internet Explorer") ? true : false;
-			if(!mie){
-				document.captureEvents(Event.MOUSEMOVE);
-			}
-			document.onmousemove = mousePos;
-
-			var mouseX = 0;
-			var mouseY = 0;
-
-			function mousePos(e){
-				if(!mie){
-					mouseX = e.pageX;
-					mouseY = e.pageY;
-				}
-				else{
-					mouseX = e.clientX + document.body.scrollLeft;
-					mouseY = e.clientY + document.body.scrollRight;
-				}
-
-				/*document.write clears the document and all the event handlers inside it*/
-				document.body.innerHTML += "X: " + mouseX + ";Y: " + mouseY + ";  Time: " + new Date() + "<br>";	
-				return true;
-			}
-		</script>
-		
+		<span id="something">text here</span>		
 	</body>
 </html>

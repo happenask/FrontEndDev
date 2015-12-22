@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration form</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			.div{
+				height: 20px;
+				background-color: #2A646C;
+				width: 60%;
+				margin: auto;
+			}
+			.form{
+				background-color: #C4D8E2;
+				height: 350px;
+				width: 50%;
+				margin: auto;
+				padding-left: 10px;
+				padding-right: 10px;
+				position: relative;
+			}
+			.para1{
+				height:20px;
+				color: #5D8AA8;
+				font-family: sans-serif;
+				font-size: 12px;
+			}
+			.para2{
+				width:50%;
+			}
+			.para3{
+				width: 100%;
+				margin-top: 0px;
+			}
+			.span1{
+				font-weight: bold;
+				font-family: "Times New Roman";
+				font-size: 16px;
+				color: #5D8AA8;
+				margin-right: 5px;
+			}
+			.span2{
+				color: #5072A7;
+				font-weight: bold;
+				font-family: "Times New Roman";
+				font-size: 16px;
+			}
+			.span3, .span4{
+				font-weight: bold;
+				font-family: "Times New Roman";
+				font-size: 14px;
+				color: white;
+			}
+			.span3{
+				margin-right: 5px;
+			}
+			.span4{
+				color: white;
+				font-style: underline;
+				font-size: 10px;
+				position: absolute;
+				right: 10px;
+				bottom: 20px;
+			}
+			.register{
+				margin: 5px;
+				width: 50%;
+				position: relative;
+			}
+			.login{
+				margin: 5px;
+				width: 40%;
+				height: 230px;
+				position: absolute;
+				right: 10px;
+				top: 80px;
+				background-color: #5072A7;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.submitbutton{
+				border: 1px solid black;
+				width: 20%;
+				height: 30px;
+				position: absolute;
+				right: 70px;
+			}
+			.loginbutton{
+				border: 1px solid orange;
+				background-color: #5072A7;
+				width: 20%;
+				height: 30px;
+				position: absolute;
+				right: 10px;
+				bottom: 40px;
+			}
+			.checkbox{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div"></div><br><br>
+		<form class="form" method="POST" action="javascript:void(0)" enctype="multipart/form-data">
+			<h3>Enter the system</h3>
+			<p class="para1"><span>It is necessary to login in Your account in order to sign up for a course.</span></p>
+			<p class="para2"><span class="span1">ARE YOU NEW?</span><span class="span2">REGISTER</span></p>
+			
+			<div class="register">
+				<input type="text" name="username" required placeholder="User name" autocompleter="off"
+								pattern="^[A-Za-z0-9._-]{6,10}$" size="40" maxlength="10">
+				<br><br>
+				<input type="email" name="emailid" required placeholder="Email" autocompleter="off"
+									pattern="^[A-Za-z0-9 _.-]+@[A-Za-z.-]+\.[A-Za-z]{3,4}$" size="40" maxlength="30">
+				<br><br>
+				<input type="password" name="password" required placeholder="Password" autocompleter="off"
+									pattern="^[A-Za-z0-9 _.-]{8,15}$" size="40" maxlength="15">
+				<br><br>
+				<input type="password" name="confirmpassword" required placeholder="Confirm Password" 
+									pattern="^[A-Za-z0-9 _.-]{8,15}$" size="40" maxlength="15" autocompleter="off">
+				<br><br>
+				<input type="submit" name="register" value="Register" class="submitbutton">
+			</div>
+			<div class="login">
+				<p class="para3"><span class="span3">ALREADY A STUDENT?</span><span class="span4">LOGIN</span></p>
+				<br><br>
+				<input type="text" name="loginname" required placeholder="User name" autocompleter="off"
+								pattern="^[A-Za-z0-9._-]{6,10}$" size="40" maxlength="10">
+				<br><br>
+				<input type="password" name="loginpassword" required placeholder="Password" autocompleter="off"
+									pattern="^[A-Za-z0-9 _.-]{8,15}$" size="40" maxlength="15">
+				<br><br>
+				<input type="checkbox" name="remember" value="yes"><span class="checkbox">Remember me?</span>
+				<br><br>
+				<input type="submit" name="register" value="Login" class="loginbutton">
+				<span class="span4">Forgot Password?</span>
+			</div>
+									
+		</form>
+	</body>
+</html>

@@ -1,27 +1,42 @@
 p.speech
 {
 	position: relative;
-	width: 100px;
-	height: 80px;
+	width: 200px;
+	height: 40px;
 	left: 100px;
 	top: 100px;
-	background-color: #89CFF0;
+	background-color: #FFFFFF;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	text-align: center;
+	border: 1px solid red;
 }
 
+
+p.speech::before{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left:-10px;
+	top: -10px;
+	border: 20px solid;
+	border-color: #FF0000 transparent transparent  transparent;
+  	-webkit-transform: rotate(25deg);
+  	-moz-transform: rotate(25deg);
+   	transform: rotate(25deg);
+}
 
 p.speech::after{
 	content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
-	left:-15px;
-	top: -15px;
-	border: 25px solid;
-	/*border-color: transparent transparent #89CFF0 transparent;*/
-	border-color: transparent transparent #89CFF0 transparent;
+	left:-9px;
+	top: -10px;
+	border: 19px solid;
+	border-color: #FFFFFF transparent transparent  transparent;
   	-webkit-transform: rotate(25deg);
   	-moz-transform: rotate(25deg);
    	transform: rotate(25deg);
