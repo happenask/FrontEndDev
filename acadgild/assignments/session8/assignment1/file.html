@@ -4,138 +4,145 @@
 		<title>Registration form</title>
 		<meta charset="UTF-8">
 		<style type="text/css">
-			.div{
+			#header{
 				height: 20px;
 				background-color: #2A646C;
-				width: 60%;
-				margin: auto;
-			}
-			.form{
-				background-color: #C4D8E2;
-				height: 350px;
 				width: 50%;
 				margin: auto;
-				padding-left: 10px;
-				padding-right: 10px;
-				position: relative;
 			}
-			.para1{
-				height:20px;
+			#container{
+				display:flex;
+				flex-wrap: wrap;
+				border: 2px solid red;
+				width: 50%;
+				margin: auto;
+				padding: 10px;
+				background-color: #C4D8E2;
+			}
+			#container1{
+				border: 2px solid yellow;
+				width: 100%;
+				background-color: #C4D8E2;
+			}
+			#container1 p span{
+				background-color: #C4D8E2;
 				color: #5D8AA8;
 				font-family: sans-serif;
 				font-size: 12px;
 			}
-			.para2{
-				width:50%;
+			#container1 h3{
+				background-color: #C4D8E2;
 			}
-			.para3{
+			#container2{
+				border: 2px solid blue;
+				width: 45%;
+				background-color: #C4D8E2;
+				margin-right: 8%;
+				display:flex;
+				flex-wrap: wrap;
+			}
+			#container2 form{
 				width: 100%;
-				margin-top: 0px;
+				height: 100%;
 			}
-			.span1{
+			#container2 p{
+				width:100%;
+			}
+			#container2 span{
 				font-weight: bold;
 				font-family: "Times New Roman";
 				font-size: 16px;
+			}
+			#container2 #span1{
 				color: #5D8AA8;
 				margin-right: 5px;
 			}
-			.span2{
+			#container2 #span2{
 				color: #5072A7;
-				font-weight: bold;
-				font-family: "Times New Roman";
-				font-size: 16px;
 			}
-			.span3, .span4{
-				font-weight: bold;
-				font-family: "Times New Roman";
-				font-size: 14px;
-				color: white;
-			}
-			.span3{
-				margin-right: 5px;
-			}
-			.span4{
-				color: white;
-				font-style: underline;
-				font-size: 10px;
-				position: absolute;
-				right: 10px;
-				bottom: 20px;
-			}
-			.register{
-				margin: 5px;
-				width: 50%;
-				position: relative;
-			}
-			.login{
-				margin: 5px;
-				width: 40%;
-				height: 230px;
-				position: absolute;
-				right: 10px;
-				top: 80px;
-				background-color: #5072A7;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-			.submitbutton{
+			#container2 input[type=submit]{
 				border: 1px solid black;
-				width: 20%;
-				height: 30px;
-				position: absolute;
-				right: 70px;
+				width: 25%;
+				height: 40%;
+				margin-left: 68%;
+				background-color: #C4D8E2;
+				display: block;
 			}
-			.loginbutton{
-				border: 1px solid orange;
+			#container3{
+				border: 2px solid green;
+				width: 45%;
 				background-color: #5072A7;
-				width: 20%;
-				height: 30px;
-				position: absolute;
-				right: 10px;
-				bottom: 40px;
-			}
-			.checkbox{
 				color: white;
+			}
+			#container3 form{
+				width: 100%;
+				height: 100%;
+			}
+			#container3 input[type=submit]{
+				border: 2px solid orange;
+				background-color: #5072A7;
+				width: 25%;
+				height: 10%;
+				margin-left: 68%;
+			}
+			#container3  label:nth-last-of-type(1){
+				font-size: 14px;
+				
+			}
+			#container3 label:nth-last-of-type(2){
+				display: inline-block;
+				font-size: 10px;
+				font-style: underline;
+				margin-left: 68%;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="div"></div><br><br>
-		<form class="form" method="POST" action="javascript:void(0)" enctype="multipart/form-data">
-			<h3>Enter the system</h3>
-			<p class="para1"><span>It is necessary to login in Your account in order to sign up for a course.</span></p>
-			<p class="para2"><span class="span1">ARE YOU NEW?</span><span class="span2">REGISTER</span></p>
+		<div id="header"></div><br><br>
+		<div id="container">
+			<div id="container1">
+				<h3>Enter the system</h3>
+				<p><span>It is necessary to login in Your account in order to sign up for a course.</span></p>
+			</div>
 			
-			<div class="register">
-				<input type="text" name="username" required placeholder="User name" autocompleter="off"
-								pattern="^[A-Za-z0-9._-]{6,10}$" size="40" maxlength="10">
+			<div id="container2">
+				<p><span id="span1">ARE YOU NEW?</span><span id="span2">REGISTER</span></p>
+				<form method="POST" action="javascript:void(0)" enctype="multipart/form-data">
+					<input type="text" name="username" required placeholder="User name" autocomplete="off"
+								pattern="^[A-Za-z0-9._-]{6,10}$" title="Invalid username" size="40" maxlength="10">
 				<br><br>
-				<input type="email" name="emailid" required placeholder="Email" autocompleter="off"
-									pattern="^[A-Za-z0-9 _.-]+@[A-Za-z.-]+\.[A-Za-z]{3,4}$" size="40" maxlength="30">
+				<input type="email" name="emailid" required placeholder="Email" autocomplete="off"
+									pattern="^[A-Za-z0-9 _.-]+@[A-Za-z.-]+\.[A-Za-z]{3,4}$" title="Invaid email-id" size="40" maxlength="30">
 				<br><br>
-				<input type="password" name="password" required placeholder="Password" autocompleter="off"
-									pattern="^[A-Za-z0-9 _.-]{8,15}$" size="40" maxlength="15">
+				<input type="password" name="password" required placeholder="Password" autocomplete="off"
+									pattern="^[A-Za-z0-9 _.-]{8,15}$" title="Invalid password" size="40" maxlength="15">
 				<br><br>
 				<input type="password" name="confirmpassword" required placeholder="Confirm Password" 
-									pattern="^[A-Za-z0-9 _.-]{8,15}$" size="40" maxlength="15" autocompleter="off">
+									pattern="^[A-Za-z0-9 _.-]{8,15}$" title="Invalid password" size="40" maxlength="15" autocomplete="off">
 				<br><br>
-				<input type="submit" name="register" value="Register" class="submitbutton">
+				<input type="submit" name="register" value="Register">	
+				</form>
 			</div>
-			<div class="login">
-				<p class="para3"><span class="span3">ALREADY A STUDENT?</span><span class="span4">LOGIN</span></p>
-				<br><br>
-				<input type="text" name="loginname" required placeholder="User name" autocompleter="off"
-								pattern="^[A-Za-z0-9._-]{6,10}$" size="40" maxlength="10">
-				<br><br>
-				<input type="password" name="loginpassword" required placeholder="Password" autocompleter="off"
-									pattern="^[A-Za-z0-9 _.-]{8,15}$" size="40" maxlength="15">
-				<br><br>
-				<input type="checkbox" name="remember" value="yes"><span class="checkbox">Remember me?</span>
-				<br><br>
-				<input type="submit" name="register" value="Login" class="loginbutton">
-				<span class="span4">Forgot Password?</span>
+			
+			<div id="container3">
+				<form method="POST" action="javascript:void(0)" enctype="multipart/form-data">
+					<p class="para3"><span class="span3">ALREADY A STUDENT?</span><span class="span4">LOGIN</span></p>
+					<br><br>
+					<input type="text" name="loginname" required placeholder="User name" autocompleter="off"
+									pattern="^[A-Za-z0-9._-]{6,10}$" title="Invalid login" size="40" maxlength="10">
+					<br><br>
+					<input type="password" name="loginpassword" required placeholder="Password" autocompleter="off"
+										pattern="^[A-Za-z0-9 _.-]{8,15}$" title="Invalid password" size="40" maxlength="15">
+					<br><br>
+					<input type="checkbox" name="remember" value="yes" id="remember"><label for="remember">Remember me?</label>
+					<br><br>
+					<input type="submit" name="login" value="Login" id="loginbutton">
+					<br>
+					<label>Forgotpassword?</label>
+					
+				</form>	
 			</div>
-									
-		</form>
+			
+		</div>
 	</body>
 </html>
