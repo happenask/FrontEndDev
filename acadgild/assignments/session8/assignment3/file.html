@@ -3,22 +3,40 @@
 	<head>
 		<title>Form validation</title>
 		<meta charset="UTF-8">
+		<style type="text/css">
+			form, p{
+				width: 18%;
+				margin: auto;
+			}
+			form *{
+				height: 30px;
+			}
+			form > input[type=text]{
+				height: 50px;
+			}
+		</style>
 	</head>
 	<body>
+		<p>Fill The Form</p><br><br><br>
 		<form method="POST" action="javascript:void(0)" enctype="multipart/form-data">
-			<fieldset>
-				<legend>Fill the Form</legend>
-				<input type="email" placeholder="Email" required autocomplete="off" autofocus="on">
-				<input type="password" placeholder="Password" required autocomplete="on">
-				<input type="url" placeholder="your project URL" required autocomplete="on">
-				<input type="date" placeholder="Project completion date" required autocomplete="on">
-				<input type="text" placeholder="Current month" required autocomplete="on">
-				<input type="text" placeholder="Current week" required autocomplete="on">
-				<input type="text" placeholder="Current time" required autocomplete="on">
-				<input type="color" required autocomplete="on">
-				<input type="range" required autocomplete="on">
-				<input type="text" placeholder="Enter hobbies" required autocomplete="on">
-			</fieldset>
+				<input type="email" name="email_id" placeholder="Email" required autocomplete="off" autofocus="on" pattern="^[A-Za-z0-9_-.]+@[A-Za-z-]{3, 4}\.[A-Za-z]{2, 3}$"><br>
+				<input type="password" name="password" placeholder="Password" required autocomplete="on" pattern="^[A-Za-z0-9_.-]{6, 10}$"><br>
+				<input type="url" name="url" placeholder="your project URL" required autocomplete="on"><br>
+				<input type="date" name="projectCompletionDate" placeholder="Project completion date" required autocomplete="off"><br>
+				<input type="month" placeholder="Current month" required autocomplete="on"><br>
+				<input type="week" placeholder="Current week" required autocomplete="on"><br>
+				<input type="time" placeholder="Current time" required autocomplete="on"><br>
+				<label>Select color:</label><input type="color" required autocomplete="on"><br>
+				<label>Age:</label><input type="range" required autocomplete="on"><br>
+				<label>Hobbies:</label><input list="hobbies" name="hobby">
+										  <datalist id="hobbies">
+										    <option value="Soccer">
+										    <option value="Reading">
+										    <option value="Golf">
+										    <option value="Swimming">
+										    <option value="Tennis">
+										  </datalist>
+				<input type="submit" value="Submit Query">
 		</form>
 	</body>
 </html>
