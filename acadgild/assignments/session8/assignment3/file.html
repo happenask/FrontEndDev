@@ -11,7 +11,7 @@
 			form *{
 				height: 30px;
 			}
-			form > input[type=text]{
+			form  input[type=text]{
 				height: 50px;
 			}
 		</style>
@@ -19,15 +19,17 @@
 	<body>
 		<p>Fill The Form</p><br><br><br>
 		<form method="POST" action="javascript:void(0)" enctype="multipart/form-data">
-				<input type="email" name="email_id" placeholder="Email" required autocomplete="off" autofocus="on" pattern="^[A-Za-z0-9_-.]+@[A-Za-z-]{3, 4}\.[A-Za-z]{2, 3}$"><br>
-				<input type="password" name="password" placeholder="Password" required autocomplete="on" pattern="^[A-Za-z0-9_.-]{6, 10}$"><br>
+				<input type="email" name="email_id" placeholder="Email" required autocomplete="off" autofocus 
+									pattern="^[A-Za-z0-9_\-\.]+@[A-Za-z\-]{3, 4}\.[A-Za-z]{2, 3}$" title="Invalid email-id"><br>
+				<input type="password" name="password" placeholder="Password" required autocomplete="on" 
+									pattern="^[A-Za-z0-9_\.\-]{6, 10}$" title="Invalid pasword"><br>
 				<input type="url" name="url" placeholder="your project URL" required autocomplete="on"><br>
-				<input type="date" name="projectCompletionDate" placeholder="Project completion date" required autocomplete="off"><br>
-				<input type="month" placeholder="Current month" required autocomplete="on"><br>
-				<input type="week" placeholder="Current week" required autocomplete="on"><br>
-				<input type="time" placeholder="Current time" required autocomplete="on"><br>
-				<label>Select color:</label><input type="color" required autocomplete="on"><br>
-				<label>Age:</label><input type="range" required autocomplete="on"><br>
+				<input type="date" name="projectCompletionDate" required autocomplete="off"><br>
+				<input type="month" required autocomplete="on"><br>
+				<input type="week" required autocomplete="on"><br>
+				<input type="time" required autocomplete="on"><br>
+				<label>Select color:<input type="color" autocomplete="on"></label><br>
+				<label>Age:<input type="range" autocomplete="on"></label><br>
 				<label>Hobbies:</label><input list="hobbies" name="hobby">
 										  <datalist id="hobbies">
 										    <option value="Soccer">
