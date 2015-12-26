@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+	<!-- http://codereview.stackexchange.com/questions/114976/html-5-form-validation-and-form-handling-->
 	<head>
 		<title>Form validation</title>
 		<meta charset="UTF-8">
@@ -32,11 +33,11 @@
 				<label>Age:<input type="range" autocomplete="on"></label><br>
 				<label>Hobbies:</label><input list="hobbies" name="hobby">
 										  <datalist id="hobbies">
-										    <option value="Soccer">
-										    <option value="Reading">
-										    <option value="Golf">
-										    <option value="Swimming">
-										    <option value="Tennis">
+										    <option value="Soccer" label="Playing soccer">
+										    <option value="Reading" label="Fun reading">
+										    <option value="Golf" label="Paying golf">
+										    <option value="Swimming" label="Swimming">
+										    <option value="Tennis" label="Playing tennis">
 										  </datalist>
 				<input type="submit" value="Submit Query">
 		</form>

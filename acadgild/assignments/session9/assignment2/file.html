@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anomymous function</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var result = (function(email_id){
+							var regpat = /^[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+							return regpat.test(email_id);
+						})('xyz@gmail.com');
+			document.body.innerHTML = result;
+		</script>
+</body>
+</html>

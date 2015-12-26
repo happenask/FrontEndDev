@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form validation</title>
+		<meta charset="UTF-8">
+		
+	</head>
+	<body>
+		<div style="width: 40%; margin: 0 auto;">
+			<h6>Fill the form</h6>
+			<form action="javascript:void(0)" method="POST" enctype="multipart/form-data">
+				<label>Last Name: <input type="text" placeholder="Last name" id="lastname" required ></label> <br>
+				<label>First Name: <input type="text" placeholder="First name" id="firstname" required onblur="verify('firstname');"></label> <br>
+				<label>Email: <input type="email" placeholder="Email" id="email" required 
+										onblur="(function(id){
+											var email_id = document.getElementById(id).value;
+											function validate(){
+												var regpat = /^[a-zA-Z_\.\-]+@[a-zA-Z_\-\.]+?\.[a-zA-Z]{2,4}$/;
+												return regpat.test(email_id);
+											}
+											alert(validate());
+										})('email');">
+				</label><br>
+				<label>Phone: <input type="tel" placeholder="Phone" id="phone" required></label><br>
+				<label>address: <input type="text" placeholder="Address" id="address"></label><br>
+				<input type="submit" value="Submit form">
+			</form>
+		</div>
+	</body>
+</html>
